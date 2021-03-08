@@ -1,5 +1,9 @@
+/// BFS  ----->  Breadth First Search
+/// Time Complexity -----> O(V+E) [ V  = vertices and E = edges]
+
 #include<bits/stdc++.h>
 using namespace std;
+
 #define sz 100
 vector <int> graph[sz];
 bool visited[sz];
@@ -28,6 +32,7 @@ void bfs(int source)
         }
     }
 }
+
 int main()
 {
     int nodes,edges,i;
@@ -36,16 +41,16 @@ int main()
     {
         int u,v;
         cin>>u>>v;
-        graph[u].push_back(v);
+        graph[u].push_back(v);    /// undirected graph
         graph[v].push_back(u);
     }
 
-    int source;
+    int source;     /// starting node
     cin>>source;
     bfs(source);
     cout<<"From node "<<source<<" : "<<endl;
     for(i=1;i<=nodes;i++)
-        cout<<"Distance of "<<i<<" is "<<dist[i]<<endl;
+        cout<<"Distance of node"<<i<<" is "<<dist[i]<<endl;
 
     return 0;
 
