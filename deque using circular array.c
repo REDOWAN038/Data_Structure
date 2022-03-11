@@ -115,6 +115,12 @@ void dequeuefront()
 		front = rear = -1;
 	}
 
+	else if(front==rear)
+	{
+		printf("%d is dequeued successfully\n",deque[front]);
+		front = rear = -1;
+	}
+
 	else
 	{
 		printf("%d is dequeued successfully\n",deque[front]);
@@ -128,6 +134,12 @@ void dequeuerear()
 		printf("List is empty\n");
 
 	else if(front==0 && rear==0)
+	{
+		printf("%d is dequeued successfully\n",deque[front]);
+		front = rear = -1;
+	}
+
+	else if(front==rear)
 	{
 		printf("%d is dequeued successfully\n",deque[front]);
 		front = rear = -1;
